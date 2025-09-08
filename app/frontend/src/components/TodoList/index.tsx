@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import React, { ReactElement, useEffect, useMemo, useState } from "react";
 
 import { Button, Checkbox, Divider, message, Table, TableProps } from "antd";
 import dayjs from "dayjs";
@@ -234,6 +234,48 @@ const TodoList = () => {
     return Object.groupBy(taskData, (task) => `${task.complete}`);
   }, [taskData]);
 
+  const TodoContent: () => React.ReactNode = () => {
+    const content = [
+      <Divider orientation="left" orientationMargin="0">
+        What to do
+      </Divider>,
+    ];
+
+    if (taskData.length == 0) {
+      content.push(<div className="wtd-empty">Add some tasks to start !</div>);
+      return content;
+    }
+
+    if (taskUncomplete?.length) {
+      content.push(
+        <Table<Task>
+          columns={todoColumns}
+          dataSource={taskUncomplete}
+          pagination={false}
+        />
+      );
+    } else {
+      content.push(<div className="wtd-empty">No tasks left ! Good job !</div>);
+    }
+
+    if (taskComplete?.length) {
+      content.push(
+        <Divider orientation="left" orientationMargin="0">
+          Complete
+        </Divider>
+      );
+      content.push(
+        <Table<Task>
+          columns={completeColumns}
+          dataSource={taskComplete}
+          pagination={false}
+        />
+      );
+    }
+
+    return content;
+  };
+
   return (
     <>
       <Button
@@ -248,24 +290,7 @@ const TodoList = () => {
       >
         + NEW TO DO
       </Button>
-      <Divider orientation="left" orientationMargin="0">
-        What to do
-      </Divider>
-      <Table<Task>
-        columns={todoColumns}
-        locale={{ emptyText: null }}
-        dataSource={taskUncomplete}
-        pagination={false}
-      />
-      <Divider orientation="left" orientationMargin="0">
-        Complete
-      </Divider>
-      <Table<Task>
-        columns={completeColumns}
-        locale={{ emptyText: null }}
-        dataSource={taskComplete}
-        pagination={false}
-      />
+      <TodoContent />
       <TaskModal
         task={taskToEdit}
         onClose={() => setTaskToEdit(null)}
