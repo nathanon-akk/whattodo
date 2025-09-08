@@ -234,6 +234,7 @@ const TodoList = () => {
     return Object.groupBy(taskData, (task) => `${task.complete}`);
   }, [taskData]);
 
+  ///// render content, check for empty
   const TodoContent: () => React.ReactNode = () => {
     const content = [
       <Divider orientation="left" orientationMargin="0">
