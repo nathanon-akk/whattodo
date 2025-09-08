@@ -106,7 +106,8 @@ const StyledModal = styled(Modal)`
       text-align: center;
       .input-group {
         display: block;
-        width: 420px;
+        max-width: 420px;
+        width: 100%;
         margin: 0 auto;
         text-align: left;
         .input-label {
@@ -136,7 +137,8 @@ const StyledModal = styled(Modal)`
       & > button {
         background: #ea4c89;
         color: white;
-        width: 420px;
+        max-width: 420px;
+        width: 100%;
         margin: 20px auto;
         height: 40px;
         font-size: 14px;
