@@ -6,7 +6,7 @@ services:
     restart: on-failure
     container_name: mongodb
     volumes:
-      - whattodo_mongodb:/data
+      - mongodb:/data
     networks:
       - app-network
 
@@ -23,8 +23,9 @@ services:
       - app-network
     env_file:
       - ./.env.local
-    volumes:
-      - ./app/backend:/app
+    # mounting for hot reload
+    # volumes:
+    #   - ./app/backend:/app
 
   frontend:
     build:
@@ -37,13 +38,15 @@ services:
     container_name: frontend
     networks:
       - app-network
-    volumes:
-      - ./app/frontend:/app
-      - /app/node_modules/
+    # mounting for hot reload
+    # volumes:
+    #   - ./app/frontend:/app
+    #   - /app/node_modules/
 
 volumes:
-  whattodo_mongodb:
-  node_modules:
+  mongodb:
+  # mounting for hot reload
+  # node_modules:
 
 networks:
   app-network:

@@ -23,4 +23,6 @@ This repo is highly based on https://github.com/EASS-HIT-PART-A-2022-CLASS-II/To
 The frontend is, however, almost completely rewritten.<br/>
 My decision is to go for due dates and Dockerizing from the start.<br/>
 I hope to implement signup and login with JWT, but got confused by JWT auth documentation page.<br/>
-Ant Design is used for frontend design library because of familiarity.
+Ant Design is used for frontend design library because of familiarity.<br/>
+Unfortunately, I'm not too comfortable with writing unit test, especially with no experience with Mongodb.<br/>
+No generative AI was used for creation of this repo, personally.
