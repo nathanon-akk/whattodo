@@ -23,8 +23,11 @@ docker compose up
 
 This repo is highly based on https://github.com/EASS-HIT-PART-A-2022-CLASS-II/Todo-App.<br/>
 The frontend is, however, almost completely rewritten.<br/>
+No generative AI was used for creation of this repo, as far as I am concerned.
+
 My decision is to go for due dates and Dockerizing from the start.<br/>
 I hope to implement signup and login with JWT, but got confused by JWT auth documentation page.<br/>
-Ant Design is used for frontend design library because of familiarity.<br/>
-Unfortunately, I'm not too comfortable with writing unit test, especially with no experience with Mongodb.<br/>
-No generative AI was used for creation of this repo.
+Uncomment some lines in `app/backend/database.py` optionally for dummy setup.<br/>
+Unfortunately, I'm not too comfortable with writing unit test, especially with no experience with Mongodb.
+
+Ant Design is used for frontend design library because of familiarity.
