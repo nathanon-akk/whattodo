@@ -1,5 +1,6 @@
 <h1>What to do</h1>
-This is a simple todo task website for BDI application by Nathanon Akkaraphab
+This is a simple todo task website for BDI application by Nathanon Akkaraphab<br/>
+![preview img](./preview.png)
 
 ### Architecture
 
@@ -25,4 +26,4 @@ My decision is to go for due dates and Dockerizing from the start.<br/>
 I hope to implement signup and login with JWT, but got confused by JWT auth documentation page.<br/>
 Ant Design is used for frontend design library because of familiarity.<br/>
 Unfortunately, I'm not too comfortable with writing unit test, especially with no experience with Mongodb.<br/>
-No generative AI was used for creation of this repo, personally.
+No generative AI was used for creation of this repo.
