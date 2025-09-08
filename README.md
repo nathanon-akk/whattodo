@@ -16,3 +16,11 @@ cd whattodo
 docker compose up
 # Open browser and enter http://localhost:3000
 ```
+
+### Comment
+
+This repo is highly based on https://github.com/EASS-HIT-PART-A-2022-CLASS-II/Todo-App.<br/>
+The frontend is, however, almost completely rewritten.<br/>
+My decision is to go for due dates and Dockerizing from the start.<br/>
+I hope to implement signup and login with JWT, but got confused by JWT auth documentation page.<br/>
+Ant Design is used for frontend design library because of familiarity.
