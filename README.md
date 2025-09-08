@@ -1,5 +1,6 @@
 <h1>What to do</h1>
-This is a simple todo task website for BDI application by Nathanon Akkaraphab<br/>
+This is a simple todo task website for BDI application by Nathanon Akkaraphab
+
 ![preview img](/preview.png)
 
 ### Architecture
